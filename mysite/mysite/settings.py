@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@bvm4=uxe^q5$!ywx5$8l1)*)unm0f)nt8!11opr+a33h63p*+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['TonnyWeslleyV2.pythonanywhere.com']
+ALLOWED_HOSTS = ['TonnyWeslleyV2.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'enquetes.apps.EnquetesConfig',
 ]
 
 MIDDLEWARE = [
@@ -103,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
