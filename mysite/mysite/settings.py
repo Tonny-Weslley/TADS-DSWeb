@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-@bvm4=uxe^q5$!ywx5$8l1)*)unm0f)nt8!11opr+a33h63p*+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['TonnyWeslleyV2.pythonanywhere.com']
+ALLOWED_HOSTS = ['TonnyWeslleyV2.pythonanywhere.com',   '127.0.0.1']
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [  
+    'enquetes.apps.EnquetesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
