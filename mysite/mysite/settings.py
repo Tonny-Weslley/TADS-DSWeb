@@ -31,13 +31,13 @@ ALLOWED_HOSTS = ['TonnyWeslleyV2.pythonanywhere.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'enquetes.apps.EnquetesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'enquetes.apps.EnquetesConfig',
 ]
 
 MIDDLEWARE = [
