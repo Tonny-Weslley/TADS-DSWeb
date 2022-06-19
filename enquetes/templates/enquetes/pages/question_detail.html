@@ -1,0 +1,29 @@
+{% include 'enquetes/partials/head.html' %} 
+{% include 'enquetes/partials/navbar.html' %}
+<body>
+  {% if msg_erro %}
+  <hr />
+  <b>{{ msg_erro }}</b>
+  <hr />
+  {% endif %} {{ question.question_text }}
+  <br />
+  <form action="{% url 'enquetes:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <ul>
+      {% for choice in question.choice_set.all %}
+
+      <input
+        type="radio"
+        name="choice_id"
+        value="{{ choice.id }}"
+        id="alt{{ forloop.counter }}"
+      />
+      <label for="alt{{ forloop.counter }}"> {{ choice.choice_text }} </label
+      ><br />
+
+      {% endfor %}
+    </ul>
+
+    <input type="submit" value="Registre o seu voto" />
+  </form>
+</body>

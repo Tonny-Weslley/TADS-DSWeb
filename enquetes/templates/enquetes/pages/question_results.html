@@ -1,0 +1,7 @@
+{% include 'enquetes/partials/head.html' %}
+{% include 'enquetes/partials/navbar.html' %}
+{{ question.question_text }} 
+  <br>
+  {% for choice in question.choice_set.all %}
+  <label for="alt{{ forloop.counter }}"> {{ choice.choice_text }} - {{ choice.votes }}</label><br />
+  {% endfor %}
