@@ -1,0 +1,37 @@
+:root{
+
+    --primary-color: #EB5E28;
+    --secundary-color: #FFFCF2;
+    --grey: #D9D9D9;
+    --cream: #CCC5B9;
+    --light-black: #403D39;
+    --black: #252422;
+}
+
+.background-color-primary{
+    background-color: var(--primary-color);
+}
+
+.background-color-secundary{
+    background-color: var(--secundary-color);
+}
+
+.background-cream{
+    background-color: var(--cream);
+}
+
+.background-light-black{
+    background-color: var(--light-black);
+}
+
+.background-black{
+    background-color: var(--black);
+}
+
+.background-grey{
+    background-color: var(--grey);
+}
+
+.text-grey{
+    color: var(--grey);
+}

@@ -1,29 +1,38 @@
-
-{% extends 'main.html' %}
-  
-{% block content %}
+{% extends 'main.html' %} {% block content %}
 
 <body>
-    
+  <section
+    class="container pt-5 flex flex-col flex justify-between items-center"
+  >
+    <h2 class="text-5xl">Todas as Enquetes</h2>
 
-      <div class="container pt-5">
-
+    <div class="flex flex-row m-5">
       {% for Question in Questions %}
-      
-      
-      <div class="card my-3">
-        <div class="card-header">
-          <h3> {{ Question.question_text }}</h3>
-          <a href="{% url 'enquetes:question_detail' Question.id %}"> votar </a>
-          <a href="{% url 'enquetes:question_results' Question.id %}"> ver parcial</a>
+
+      <div
+        class="rounded-lg background-color-secundary mx-4 w-50 p-4"
+      >
+        <div class="">
+          <h3 class="mb-4">{{ Question.question_text }}</h3>
+          <div class="flex flex-col">
+            <a
+              href="{% url 'enquetes:question_detail' Question.id %}"
+              class="rounded background-color-primary p-2 text-white text-center mb-2"
+            >
+              votar
+            </a>
+            <a href="{% url 'enquetes:question_results' Question.id %}"
+              class="rounded background-black p-2 text-white text-center"
+            >
+              ver parcial</a
+            >
+          </div>
         </div>
       </div>
 
-      
       {% endfor %}
-    
-      </div>
+    </div>
+  </section>
 
-
-{% endblock %}
-
+  {% endblock %}
+</body>

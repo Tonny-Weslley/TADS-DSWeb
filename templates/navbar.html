@@ -1,14 +1,28 @@
-    {% load static %}
-    {% block content %}
+{% load static %} {% block content %}
 
+<nav class="background-light-black px-7 py-3 flex justify-between items-center">
+  <a href="/"
+    ><img
+      src="{% static 'enquetes/images/Logo.png' %}"
+      alt="+Enquetes Logo"
+      class="w-10"
+  /></a>
+  <form
+    action="GET"
+    class="background-grey rounded-lg h-8 px-4 flex items-center"
+  >
+    <input
+      type="text"
+      placeholder="Pesquise por nome ou tag"
+      class="bg-transparent outline-0 text-gray-800"
+    />
+    <button><i class="fa-solid fa-magnifying-glass text-grey"></i></button>
+  </form>
 
-    <nav>
-        
-        <a href="/"><img src="{% static 'enquetes/images/Logo.png' %}" alt="+Enquetes Logo" class="w-3.5"></a>
+  <div class="flex justify-between items-center">
+    <i class="fa-solid fa-circle-user text-4xl"></i>
+    <i class="fa-solid fa-angle-down text-2xl text-grey mx-2"></i>
+  </div>
+</nav>
 
-
-    </nav>
-
-
-
-    {% endblock %}
+{% endblock %}
